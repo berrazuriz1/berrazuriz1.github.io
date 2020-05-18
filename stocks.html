@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="stocks.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="stocks.js"></script>
+  </head>
+  <body>
+    <div class="statusBar">
+      <u id="statusC" >Connected</u>
+      <u id="statusD" >Disconnected</u>
+    </div>
+    <div class="connectWrap">
+      <input class="connect" type="button">
+    </div>
+    <div class="listStocks">
+    </div>
+    <div class="chartWrap">
+      <div class="chart" id="chart_div">
+        <div class="stock">
+          <h1 id="stockName"></h1>
+        </div>
+        <div class="stock"id="lineChart"></div>
+        <div class="stock">
+          <h2 id="quote_base"></h2>
+        </div>
+        <div class="stock" id="stockContainer">
+          <table id="stockTable">
+            <tbody>
+              <tr id="titleRow">
+                <td id="first">Stock</td>
+                <td id="first">Total Volume</td>
+                <td id="first">Historical High</td>
+                <td id="first">Historical Bass</td>
+                <td id="first">Actual Price</td>
+                <td>Variation (%)</td>
+              </tr>
+              <tr id="stockValues"></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="chart" id="exchange_div">
+        <div class="exchangeContainer">
+          <table id="exchangeTable">
+            <tbody>
+              <tr id="titleRow">
+                <td id="first">Echange</td>
+                <td id="first">Buy Volume</td>
+                <td id="first">Sell Volume</td>
+                <td id="first">Total Volume</td>
+                <td id="first">Stocks Number</td>
+                <td>Market Share (%)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <table id="exchangeInfo">
+      <tbody>
+        <tr id="titleRow">
+          <td id="first">Ticker</td>
+          <td id="first">Exchange</td>
+          <td id="first">Country</td>
+          <td>Adress</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
